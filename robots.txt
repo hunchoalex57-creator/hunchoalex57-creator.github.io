@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.apexresilientflooring.ca/sitemap.xml
+Sitemap: https://www.apexresilientflooring.com/sitemap.xml

@@ -51,9 +51,9 @@ Plus: `sitemap.xml`, `robots.txt`, `css/style.css`, `js/main.js`.
 
 ## ✏️ Things to update when you're ready (placeholders)
 
-1. **Email address** — currently `info@apexresilientflooring.ca` (placeholder).
+1. **Email address** — currently `info@apexresilientflooring.com` (placeholder).
    Find & replace it site-wide with your real email once you have one.
-2. **Domain** — the SEO tags assume `https://www.apexresilientflooring.ca/`.
+2. **Domain** — the SEO tags assume `https://www.apexresilientflooring.com/`.
    If you buy a different domain, find & replace that URL in every file
    (it appears in the `<link rel="canonical">`, Open Graph, sitemap.xml and robots.txt).
 3. **Gallery photos** — `gallery.html` uses placeholders. Send real job photos and
