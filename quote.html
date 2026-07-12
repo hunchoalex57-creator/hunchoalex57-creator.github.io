@@ -52,7 +52,11 @@
       <div class="card">
         <h2 style="margin-bottom:6px;">Request a Quote</h2>
         <p class="text-muted">Fields marked <span style="color:#c0392b;">*</span> are required.</p>
-        <form data-quote-form>
+        <form data-quote-form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="7d81105d-6df5-4931-ad55-b5f05de32712">
+          <input type="hidden" name="subject" value="New Quote Request — Apex Website">
+          <input type="hidden" name="from_name" value="Apex Resilient Flooring Website">
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none !important;" tabindex="-1" autocomplete="off">
           <div class="form-success">✓ Thank you! Your quote request has been received. We'll get back to you shortly at the phone or email you provided.</div>
           <div class="field-row">
             <div class="field"><label>Full Name <span class="req">*</span></label><input type="text" name="name" required placeholder="Your name"></div>

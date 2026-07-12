@@ -21,16 +21,49 @@
     });
   });
 
-  // Quote / contact form (front-end only demo handler)
+  // Quote / contact form → sends to Web3Forms (lands in the business inbox)
   document.querySelectorAll("form[data-quote-form]").forEach(function (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var success = form.querySelector(".form-success");
-      if (success) {
-        success.style.display = "block";
-        success.scrollIntoView({ behavior: "smooth", block: "center" });
+      var btn = form.querySelector('button[type="submit"]');
+      var btnLabel = btn ? btn.innerHTML : "";
+      if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = "Sending…";
       }
-      form.reset();
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: new FormData(form),
+      })
+        .then(function (res) {
+          return res.json();
+        })
+        .then(function (data) {
+          if (data.success) {
+            if (success) {
+              success.style.display = "block";
+              success.scrollIntoView({ behavior: "smooth", block: "center" });
+            }
+            form.reset();
+          } else {
+            alert(
+              "Sorry — something went wrong sending your request. Please call or text 416-889-8273."
+            );
+          }
+        })
+        .catch(function () {
+          alert(
+            "Sorry — something went wrong sending your request. Please call or text 416-889-8273."
+          );
+        })
+        .finally(function () {
+          if (btn) {
+            btn.disabled = false;
+            btn.innerHTML = btnLabel;
+          }
+        });
     });
   });
 

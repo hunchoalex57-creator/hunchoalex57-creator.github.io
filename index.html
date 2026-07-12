@@ -126,7 +126,11 @@
       <div class="hero-card">
         <h3>Request a Fast Quote</h3>
         <p>Tell us about your project and we'll get back to you quickly.</p>
-        <form data-quote-form>
+        <form data-quote-form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="7d81105d-6df5-4931-ad55-b5f05de32712">
+          <input type="hidden" name="subject" value="New Quick Quote — Apex Website">
+          <input type="hidden" name="from_name" value="Apex Resilient Flooring Website">
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none !important;" tabindex="-1" autocomplete="off">
           <div class="form-success">✓ Thanks! Your request was sent. We'll reach out shortly at the contact info you provided.</div>
           <div class="field">
             <label>Name <span class="req">*</span></label>
