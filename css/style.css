@@ -157,8 +157,8 @@ section { position: relative; }
 .hero {
   position: relative; color: #fff;
   background:
-    linear-gradient(115deg, rgba(20,40,70,.94) 0%, rgba(29,78,137,.86) 55%, rgba(47,107,179,.72) 100%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect width='60' height='60' fill='%23223247'/%3E%3Cpath d='M0 30h60M30 0v60' stroke='%232c3f57' stroke-width='1'/%3E%3C/svg%3E");
+    linear-gradient(115deg, rgba(20,40,70,.90) 0%, rgba(29,78,137,.80) 55%, rgba(47,107,179,.62) 100%),
+    url("../assets/hero.jpg");
   background-size: cover; background-position: center;
   padding: 96px 0;
 }
@@ -225,7 +225,8 @@ section { position: relative; }
 /* Service card with image band */
 .svc-card { overflow: hidden; padding: 0; }
 .svc-card .svc-top {
-  height: 150px; background: linear-gradient(135deg, var(--slate), var(--blue));
+  height: 170px; background: linear-gradient(135deg, var(--slate), var(--blue));
+  background-size: cover; background-position: center;
   display: grid; place-items: center; color: #fff; font-size: 2.4rem;
 }
 .svc-card .svc-body { padding: 24px; }
@@ -250,10 +251,19 @@ section { position: relative; }
 .split .media {
   border-radius: var(--radius-lg); min-height: 340px; box-shadow: var(--shadow);
   background: linear-gradient(135deg, var(--slate-dark), var(--blue));
-  display: grid; place-items: center; color: rgba(255,255,255,.85); text-align: center; padding: 24px;
+  background-size: cover; background-position: center;
+  display: grid; place-items: end stretch; color: #fff; text-align: left;
+  padding: 24px; overflow: hidden;
 }
-.media-label { font-size: 1rem; font-weight: 600; }
+.media-label { font-size: 1rem; font-weight: 600; text-shadow: 0 1px 4px rgba(0,0,0,.5); }
 .media-label .big { display:block; font-size: 3rem; margin-bottom: 8px; }
+/* When a photo is set on .media (inline background-image), add a dark gradient
+   so the caption text stays readable at the bottom. */
+.split .media.has-photo {
+  background-image:
+    linear-gradient(to top, rgba(15,25,40,.72) 0%, rgba(15,25,40,.10) 45%, rgba(15,25,40,0) 70%),
+    var(--media-photo);
+}
 
 /* Steps ------------------------------------------------------------------ */
 .steps { counter-reset: step; display: grid; gap: 24px; }
@@ -298,6 +308,14 @@ section { position: relative; }
 }
 .gallery-item .g-emoji { font-size: 2.6rem; margin-bottom: 8px; }
 .gallery-item .g-cap { font-size: .9rem; font-weight: 600; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+.gallery-item:hover img { transform: scale(1.06); }
+.gallery-item .g-cap-bar {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+  background: linear-gradient(to top, rgba(15,25,40,.78), rgba(15,25,40,0));
+  color: #fff; text-align: left; font-size: .88rem; font-weight: 600;
+  padding: 26px 16px 12px;
+}
 
 /* CTA band --------------------------------------------------------------- */
 .cta-band { background: linear-gradient(115deg, var(--blue-dark), var(--blue-light)); color: #fff; text-align: center; padding: 70px 0; }
