@@ -33,9 +33,13 @@
         btn.innerHTML = "Sending…";
       }
 
+      var payload = new FormData(form);
+      // Free Web3Forms plan can't attach files, so photos are collected via text instead.
+      payload.delete("photos");
+
       fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: new FormData(form),
+        body: payload,
       })
         .then(function (res) {
           return res.json();
