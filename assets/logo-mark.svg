@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Apex Resilient Flooring">
+  <defs>
+    <linearGradient id="apexBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a78c0"/>
+      <stop offset="0.55" stop-color="#1d4e89"/>
+      <stop offset="1" stop-color="#143a68"/>
+    </linearGradient>
+    <linearGradient id="apexGloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="apexGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f9be4b"/>
+      <stop offset="1" stop-color="#e59712"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="1.1" stdDeviation="1.1" flood-color="#0c2540" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- badge -->
+  <rect x="0" y="0" width="64" height="64" rx="15" fill="url(#apexBlue)"/>
+  <rect x="0" y="0" width="64" height="64" rx="15" fill="url(#apexGloss)"/>
+  <rect x="1.6" y="1.6" width="60.8" height="60.8" rx="13.4" fill="none"
+        stroke="#ffffff" stroke-opacity="0.22" stroke-width="1.1"/>
+
+  <!-- receding floor of planks -->
+  <g stroke-linecap="round">
+    <line x1="19" y1="45.5" x2="45" y2="45.5" stroke="#ffffff" stroke-opacity="0.55" stroke-width="2.2"/>
+    <line x1="16.5" y1="50" x2="47.5" y2="50" stroke="#ffffff" stroke-opacity="0.75" stroke-width="2.6"/>
+    <line x1="14" y1="54.5" x2="50" y2="54.5" stroke="url(#apexGold)" stroke-width="3.4"/>
+  </g>
+
+  <!-- apex peak = the "A" / summit -->
+  <g filter="url(#softShadow)">
+    <path d="M17 41.5 L32 15.5 L47 41.5" fill="none" stroke="#ffffff" stroke-width="5.6"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="24.6" y1="34" x2="39.4" y2="34" stroke="url(#apexGold)" stroke-width="5.2" stroke-linecap="round"/>
+  </g>
+</svg>

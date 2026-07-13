@@ -119,9 +119,10 @@ section { position: relative; }
 .brand { display: flex; align-items: center; gap: 12px; }
 .brand-mark {
   width: 44px; height: 44px; border-radius: 9px; flex-shrink: 0;
-  background: linear-gradient(135deg, var(--blue), var(--blue-light));
-  display: grid; place-items: center; color: #fff; font-weight: 800;
+  background: url("../assets/logo-mark.svg") center / contain no-repeat;
+  display: grid; place-items: center; color: transparent; font-weight: 800;
   font-size: 1.2rem; letter-spacing: -1px; box-shadow: var(--shadow-sm);
+  text-indent: -9999px; overflow: hidden;
 }
 .brand-name { display: flex; flex-direction: column; line-height: 1.05; }
 .brand-name strong { font-family: var(--font-head); font-size: 1.18rem; color: var(--slate-dark); font-weight: 800; letter-spacing: -.3px; }
