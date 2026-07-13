@@ -75,4 +75,41 @@
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = new Date().getFullYear();
   });
+
+  // Elevate the sticky header once the page is scrolled
+  var header = document.querySelector(".site-header");
+  if (header) {
+    var onScroll = function () {
+      header.classList.toggle("scrolled", window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  // Subtle scroll-reveal for content blocks (skips users who prefer reduced motion)
+  var prefersReduced =
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var revealTargets = document.querySelectorAll(
+    ".section-head, .card, .stat, .step, .quote-card, .gallery-item, .info-item, .split .media"
+  );
+  if (!prefersReduced && "IntersectionObserver" in window && revealTargets.length) {
+    revealTargets.forEach(function (el) {
+      el.classList.add("reveal");
+    });
+    var io = new IntersectionObserver(
+      function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+    revealTargets.forEach(function (el) {
+      io.observe(el);
+    });
+  }
 })();
