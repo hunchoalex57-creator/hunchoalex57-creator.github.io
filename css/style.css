@@ -444,7 +444,6 @@ section { position: relative; }
     position: static; opacity: 1; visibility: visible; transform: none;
     box-shadow: none; border: 0; padding: 4px 0 4px 14px; min-width: auto;
   }
-  .fab-call { display: inline-flex; }
 }
 
 @media (max-width: 620px) {
