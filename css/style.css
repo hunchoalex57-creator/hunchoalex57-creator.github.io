@@ -71,7 +71,7 @@ section { position: relative; }
   color: var(--blue);
   margin-bottom: 12px;
 }
-.bg-slate .eyebrow, .bg-blue .eyebrow { color: var(--accent); }
+.bg-slate .eyebrow, .bg-blue .eyebrow, .page-hero .eyebrow { color: var(--accent); }
 .section-head { max-width: 720px; margin: 0 auto 52px; }
 .section-head.center { text-align: center; }
 .lead { font-size: 1.15rem; color: var(--muted); }
