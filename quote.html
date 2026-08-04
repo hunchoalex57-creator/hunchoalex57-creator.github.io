@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Get a Free Flooring Quote | GTA | Apex Resilient Flooring</title>
-<meta name="description" content="Request a free flooring quote from Apex Resilient Flooring. Tell us about your project, upload photos, and we'll get back to you fast. Serving the GTA. Call or text 416-889-8273.">
+<meta name="description" content="Request a free flooring quote from Apex Resilient Flooring. Tell us about your project and we'll get back to you fast. Serving the GTA.">
 <link rel="canonical" href="https://www.apexresilientflooring.com/quote.html">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#1d4e89">
@@ -68,14 +68,14 @@
           <input type="checkbox" name="botcheck" class="hidden" style="display:none !important;" tabindex="-1" autocomplete="off">
           <div class="form-success"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Thank you! Your quote request has been received. We'll get back to you shortly at the phone or email you provided.</div>
           <div class="field-row">
-            <div class="field"><label>Full Name <span class="req">*</span></label><input type="text" name="name" required placeholder="Your name"></div>
-            <div class="field"><label>Phone <span class="req">*</span></label><input type="tel" name="phone" required placeholder="(416) 000-0000"></div>
+            <div class="field"><label for="f-name">Full Name <span class="req">*</span></label><input id="f-name" type="text" name="name" required placeholder="Your name"></div>
+            <div class="field"><label for="f-phone">Phone <span class="req">*</span></label><input id="f-phone" type="tel" name="phone" required placeholder="(416) 000-0000"></div>
           </div>
-          <div class="field"><label>Email</label><input type="email" name="email" placeholder="you@email.com"></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" name="email" placeholder="you@email.com"></div>
           <div class="field-row">
-            <div class="field"><label>City / Area <span class="req">*</span></label><input type="text" name="city" required placeholder="e.g. Toronto, Mississauga…"></div>
-            <div class="field"><label>Project Type</label>
-              <select name="project">
+            <div class="field"><label for="f-city">City / Area <span class="req">*</span></label><input id="f-city" type="text" name="city" required placeholder="e.g. Toronto, Mississauga…"></div>
+            <div class="field"><label for="f-project">Project Type</label>
+              <select id="f-project" name="project">
                 <option value="">Select…</option>
                 <option>Residential — my home</option>
                 <option>Commercial — business</option>
@@ -84,8 +84,8 @@
               </select>
             </div>
           </div>
-          <div class="field"><label>Type of Flooring</label>
-            <select name="service">
+          <div class="field"><label for="f-service">Type of Flooring</label>
+            <select id="f-service" name="service">
               <option value="">Select a service…</option>
               <option>Vinyl Sheet</option>
               <option>Glue-Down LVT / LVP</option>
@@ -98,9 +98,9 @@
             </select>
           </div>
           <div class="field-row">
-            <div class="field"><label>Approx. Square Footage</label><input type="text" name="sqft" placeholder="e.g. 800 sq ft (if known)"></div>
-            <div class="field"><label>Ideal Timeline</label>
-              <select name="timeline">
+            <div class="field"><label for="f-sqft">Approx. Square Footage</label><input id="f-sqft" type="text" name="sqft" placeholder="e.g. 800 sq ft (if known)"></div>
+            <div class="field"><label for="f-timeline">Ideal Timeline</label>
+              <select id="f-timeline" name="timeline">
                 <option value="">Select…</option>
                 <option>As soon as possible</option>
                 <option>Within a few weeks</option>
@@ -109,14 +109,14 @@
               </select>
             </div>
           </div>
-          <div class="field"><label>Project Details</label><textarea name="details" placeholder="Tell us about the space, current flooring, and anything else we should know…"></textarea></div>
+          <div class="field"><label for="f-details">Project Details</label><textarea id="f-details" name="details" placeholder="Tell us about the space, current flooring, and anything else we should know…"></textarea></div>
           <div class="field">
-            <label>Have Photos? (optional)</label>
+            <span class="field-label">Have Photos? (optional)</span>
             <p class="form-note"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3l2-3h6l2 3h3a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg> Photos help us give the most accurate quote. After submitting, just text them to <a href="sms:+14168898273">416-889-8273</a> — quick and easy.</p>
           </div>
           <div class="field">
-            <label>Preferred Contact Method</label>
-            <select name="contact_pref">
+            <label for="f-contact_pref">Preferred Contact Method</label>
+            <select id="f-contact_pref" name="contact_pref">
               <option>Phone call</option>
               <option>Text message</option>
               <option>Email</option>

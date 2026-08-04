@@ -189,7 +189,7 @@ section { position: relative; }
 
 /* Forms ------------------------------------------------------------------ */
 .field { margin-bottom: 16px; }
-.field label { display: block; font-weight: 600; margin-bottom: 6px; font-size: .92rem; color: var(--slate); }
+.field label, .field .field-label { display: block; font-weight: 600; margin-bottom: 6px; font-size: .92rem; color: var(--slate); }
 .field label .req { color: #c0392b; }
 .field input, .field select, .field textarea {
   width: 100%; padding: 12px 14px; border: 1.5px solid var(--line);
