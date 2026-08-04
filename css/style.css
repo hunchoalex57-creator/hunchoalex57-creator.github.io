@@ -372,7 +372,7 @@ section { position: relative; }
 
 /* Footer ----------------------------------------------------------------- */
 .site-footer { background: var(--slate-dark); color: #aeb9c6; padding: 64px 0 0; }
-.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 40px; }
+.footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr 1.2fr; gap: 34px; }
 .site-footer h4 { color: #fff; font-size: 1.02rem; margin-bottom: 18px; text-transform: uppercase; letter-spacing: .06em; }
 .site-footer a { color: #aeb9c6; }
 .site-footer a:hover { color: var(--accent); }
