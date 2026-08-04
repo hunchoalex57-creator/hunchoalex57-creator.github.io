@@ -164,7 +164,7 @@ section { position: relative; }
   position: relative; color: #fff;
   background:
     linear-gradient(115deg, rgba(20,40,70,.90) 0%, rgba(29,78,137,.80) 55%, rgba(47,107,179,.62) 100%),
-    url("../assets/hero.jpg");
+    url("../assets/hero.webp");
   background-size: cover; background-position: center;
   padding: 96px 0;
 }
