@@ -279,21 +279,29 @@ main:focus { outline: none; }
 /* Split media ------------------------------------------------------------ */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .split .media {
+  position: relative;
   border-radius: var(--radius-lg); min-height: 340px; box-shadow: var(--shadow);
   background: linear-gradient(135deg, var(--slate-dark), var(--blue));
   background-size: cover; background-position: center;
   display: grid; place-items: end stretch; color: #fff; text-align: left;
   padding: 24px; overflow: hidden;
 }
-.media-label { font-size: 1rem; font-weight: 600; text-shadow: 0 1px 4px rgba(0,0,0,.5); }
-.media-label .big { display:block; font-size: 3rem; margin-bottom: 8px; }
-/* When a photo is set on .media (inline background-image), add a dark gradient
-   so the caption text stays readable at the bottom. */
-.split .media.has-photo {
-  background-image:
-    linear-gradient(to top, rgba(15,25,40,.72) 0%, rgba(15,25,40,.10) 45%, rgba(15,25,40,0) 70%),
-    var(--media-photo);
+/* The photo is a real <img> so it can lazy-load; it sits behind the caption
+   rather than being a background. The gradient that keeps the caption legible
+   moves to ::before, layered between the photo and the text. */
+.split .media > img {
+  position: absolute; inset: 0; z-index: 0;
+  width: 100%; height: 100%; object-fit: cover;
 }
+.split .media.has-photo::before {
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(to top, rgba(15,25,40,.72) 0%, rgba(15,25,40,.10) 45%, rgba(15,25,40,0) 70%);
+}
+.media-label {
+  position: relative; z-index: 2;
+  font-size: 1rem; font-weight: 600; text-shadow: 0 1px 4px rgba(0,0,0,.5);
+}
+.media-label .big { display:block; font-size: 3rem; margin-bottom: 8px; }
 
 /* Steps ------------------------------------------------------------------ */
 .steps { counter-reset: step; display: grid; gap: 24px; }
