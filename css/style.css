@@ -303,6 +303,27 @@ main:focus { outline: none; }
 }
 .media-label .big { display:block; font-size: 3rem; margin-bottom: 8px; }
 
+
+/* Price tables in articles ------------------------------------------------ */
+/* Wrapper scrolls on its own so the page body never scrolls sideways. */
+.table-wrap { overflow-x: auto; margin: 22px 0; border: 1px solid var(--line); border-radius: var(--radius); }
+.price-table { border-collapse: collapse; width: 100%; min-width: 430px; font-size: .95rem; }
+.price-table th, .price-table td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line); }
+.price-table thead th {
+  background: var(--steel); color: var(--slate-dark); font-weight: 700;
+  font-size: .82rem; text-transform: uppercase; letter-spacing: .04em;
+}
+.price-table tbody tr:last-child td { border-bottom: 0; }
+.price-table td + td, .price-table th + th { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.price-table tfoot td { font-weight: 700; background: var(--steel); border-top: 2px solid var(--line); }
+.table-note { font-size: .88rem; color: var(--muted); margin-top: -8px; }
+.answer-box {
+  background: var(--steel); border-left: 4px solid var(--accent);
+  padding: 18px 22px; border-radius: 0 var(--radius) var(--radius) 0; margin: 0 0 26px;
+}
+.answer-box p:last-child { margin-bottom: 0; }
+.updated { font-size: .86rem; color: var(--muted); font-style: italic; }
+
 /* Steps ------------------------------------------------------------------ */
 .steps { counter-reset: step; display: grid; gap: 24px; }
 .step { display: flex; gap: 20px; }
