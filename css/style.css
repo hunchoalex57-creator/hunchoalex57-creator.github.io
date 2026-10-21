@@ -318,6 +318,9 @@ main:focus { outline: none; }
 .price-table tbody tr:last-child td { border-bottom: 0; }
 .price-table td + td, .price-table th + th { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .price-table tfoot td { font-weight: 700; background: var(--steel); border-top: 2px solid var(--line); }
+/* Comparison tables hold words, not prices: left-aligned and allowed to wrap. */
+.price-table.compare-table { min-width: 620px; }
+.price-table.compare-table td + td, .price-table.compare-table th + th { text-align: left; white-space: normal; }
 .table-note { font-size: .88rem; color: var(--muted); margin-top: -8px; }
 .answer-box {
   background: var(--steel); border-left: 4px solid var(--accent);
@@ -452,6 +455,8 @@ main:focus { outline: none; }
 .prose h2 { margin: 34px 0 14px; }
 .prose h3 { margin: 26px 0 10px; }
 .prose ul.checklist { margin: 16px 0; }
+.prose ol { margin: 16px 0; padding-left: 1.5em; color: var(--slate); }
+.prose ol li { margin-bottom: 12px; padding-left: 4px; }
 
 /* Scroll reveal ---------------------------------------------------------- */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; will-change: opacity, transform; }
