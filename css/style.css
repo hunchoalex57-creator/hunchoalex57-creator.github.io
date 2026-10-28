@@ -3,7 +3,6 @@
    Brand: Blue & Slate Gray | Clean & Professional
    ========================================================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap");
 
 :root {
   --blue:        #1d4e89;   /* primary brand blue */
@@ -352,7 +351,7 @@ main:focus { outline: none; }
 /* Breadcrumbs ------------------------------------------------------------ */
 .crumbs { background: var(--steel); padding: 14px 0; font-size: .88rem; color: var(--muted); border-bottom: 1px solid var(--line); }
 .crumbs a { color: var(--slate); font-weight: 600; }
-.crumbs span { color: var(--slate-light); }
+.crumbs span { color: var(--muted); }
 
 /* Page hero (interior) --------------------------------------------------- */
 .page-hero {
@@ -423,7 +422,7 @@ main:focus { outline: none; }
 /* Footer ----------------------------------------------------------------- */
 .site-footer { background: var(--slate-dark); color: #aeb9c6; padding: 64px 0 0; }
 .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr 1.2fr; gap: 34px; }
-.site-footer h4 { color: #fff; font-size: 1.02rem; margin-bottom: 18px; text-transform: uppercase; letter-spacing: .06em; }
+.site-footer h2 { color: #fff; font-size: 1.02rem; margin-bottom: 18px; text-transform: uppercase; letter-spacing: .06em; }
 .site-footer a { color: #aeb9c6; }
 .site-footer a:hover { color: var(--accent); }
 .footer-links li { padding: 6px 0; }
@@ -453,6 +452,8 @@ main:focus { outline: none; }
 .narrow { max-width: 760px; margin-left:auto; margin-right:auto; }
 .prose p { color: var(--slate); font-size: 1.04rem; }
 .prose h2 { margin: 34px 0 14px; }
+.prose a { text-decoration: underline; text-underline-offset: .16em; text-decoration-thickness: .07em; }
+.prose a:hover { text-decoration-thickness: .12em; }
 .prose h3 { margin: 26px 0 10px; }
 .prose ul.checklist { margin: 16px 0; }
 .prose ol { margin: 16px 0; padding-left: 1.5em; color: var(--slate); }
